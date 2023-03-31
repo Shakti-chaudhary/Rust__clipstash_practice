@@ -1,13 +1,13 @@
 use crate::data::Dbid;
-use derive_more::Constructer;
+use derive_more::Constructor;
 use serde::{Deserialize, Serialize};
 
-#[derive(Clone, Debug, Constructer, Deserialize, Serialize)]
+#[derive(Clone, Debug, Constructor, Deserialize, Serialize)]
 pub struct ClipId(Dbid);
 
 impl ClipId {
     pub fn into_inner(self) -> Self {
-        Self(id)
+        Self(self.0)
     }
 }
 
